@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10BF7D48-2DD1-44C3-BF6C-E3DB81C71B13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OnlineStore.Repository.Entity</RootNamespace>
+    <AssemblyName>OnlineStore.Repository.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MetaData\Brand.cs">
+      <DependentUpon>OnlineStoreDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetaData\Category.cs">
+      <DependentUpon>OnlineStoreDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetaData\Color.cs">
+      <DependentUpon>OnlineStoreDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetaData\OnlineStoreDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OnlineStoreDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetaData\OnlineStoreDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OnlineStoreDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetaData\OnlineStoreDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OnlineStoreDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MetaData\Product.cs">
+      <DependentUpon>OnlineStoreDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetaData\ProductTitle.cs">
+      <DependentUpon>OnlineStoreDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetaData\Size.cs">
+      <DependentUpon>OnlineStoreDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetaData\sysdiagram.cs">
+      <DependentUpon>OnlineStoreDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\backup repository\CategoryRepository.cs" />
+    <Compile Include="Repositories\backup repository\Context.cs" />
+    <Compile Include="Repositories\backup repository\IContext.cs" />
+    <Compile Include="Repositories\backup repository\ProductRepository.cs" />
+    <Compile Include="Repositories\backup repository\ProductTitleRepository.cs" />
+    <Compile Include="Repositories\backup repository\QueryTranslator.cs" />
+    <Compile Include="Repositories\backup repository\Repository.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineStore.Infrastructure\OnlineStore.Infrastructure.csproj">
+      <Project>{4fa29c5e-5c1d-47cb-b1bb-b0e1888c389d}</Project>
+      <Name>OnlineStore.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OnlineStore.Model\OnlineStore.Model.csproj">
+      <Project>{2dae037f-caae-42b3-8e7d-aa81cc4dacd0}</Project>
+      <Name>OnlineStore.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EntityDeploy Include="MetaData\OnlineStoreDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>OnlineStoreDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="MetaData\OnlineStoreDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OnlineStoreDataModel.edmx</DependentUpon>
+      <LastGenOutput>OnlineStoreDataModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="MetaData\OnlineStoreDataModel.edmx.diagram">
+      <DependentUpon>OnlineStoreDataModel.edmx</DependentUpon>
+    </None>
+    <None Include="MetaData\OnlineStoreDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>OnlineStoreDataModel.edmx</DependentUpon>
+      <LastGenOutput>OnlineStoreDataModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,16 @@
+D:\FreelanceProject\Online Store\OnlineStore\OnlineStore.Model\bin\Debug\OnlineStore.Model.dll
+D:\FreelanceProject\Online Store\OnlineStore\OnlineStore.Model\bin\Debug\OnlineStore.Model.pdb
+D:\FreelanceProject\Online Store\OnlineStore\OnlineStore.Model\bin\Debug\OnlineStore.Infrastructure.dll
+D:\FreelanceProject\Online Store\OnlineStore\OnlineStore.Model\bin\Debug\OnlineStore.Infrastructure.pdb
+D:\FreelanceProject\Online Store\OnlineStore\OnlineStore.Model\obj\Debug\OnlineStore.Model.csprojResolveAssemblyReference.cache
+D:\FreelanceProject\Online Store\OnlineStore\OnlineStore.Model\obj\Debug\OnlineStore.Model.dll
+D:\FreelanceProject\Online Store\OnlineStore\OnlineStore.Model\obj\Debug\OnlineStore.Model.pdb
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Model\bin\Debug\OnlineStore.Model.dll
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Model\bin\Debug\OnlineStore.Model.pdb
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Model\bin\Debug\OnlineStore.Infrastructure.dll
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Model\bin\Debug\OnlineStore.Infrastructure.pdb
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Model\obj\Debug\OnlineStore.Model.dll
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Model\obj\Debug\OnlineStore.Model.pdb
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Model\bin\Debug\log4net.dll
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Model\bin\Debug\log4net.xml
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Model\obj\Debug\OnlineStore.Model.csprojResolveAssemblyReference.cache

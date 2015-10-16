@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c839a8ca6fbe47f7ac8f22068f1eb84b" Name="Diagram1">
+        <EntityTypeShape EntityType="OnlineStoreModel.Brand" Width="1.5" PointX="3.125" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineStoreModel.Category" Width="1.5" PointX="5.625" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineStoreModel.Color" Width="1.5" PointX="5.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineStoreModel.Product" Width="1.5" PointX="0.625" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineStoreModel.ProductTitle" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineStoreModel.Size" Width="1.5" PointX="0.625" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnlineStoreModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.75" />
+        <AssociationConnector Association="OnlineStoreModel.FK_ProductTitles_Brands" />
+        <AssociationConnector Association="OnlineStoreModel.FK_ProductTitles_Categories" />
+        <AssociationConnector Association="OnlineStoreModel.FK_ProductTitles_Colors" />
+        <AssociationConnector Association="OnlineStoreModel.FK_Products_ProductTitles" />
+        <AssociationConnector Association="OnlineStoreModel.FK_Products_Sizes" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

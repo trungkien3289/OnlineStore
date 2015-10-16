@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OnlineStoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="BrandId" />
+    </Key>
+    <Property Name="BrandId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ProductTitles" Relationship="OnlineStoreModel.FK_ProductTitles_Brands" FromRole="Brand" ToRole="ProductTitle" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ProductTitles" Relationship="OnlineStoreModel.FK_ProductTitles_Categories" FromRole="Category" ToRole="ProductTitle" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="ColorId" />
+    </Key>
+    <Property Name="ColorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ProductTitles" Relationship="OnlineStoreModel.FK_ProductTitles_Colors" FromRole="Color" ToRole="ProductTitle" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SizeId" Type="Int32" Nullable="false" />
+    <Property Name="ProductTitleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ProductTitle" Relationship="OnlineStoreModel.FK_Products_ProductTitles" FromRole="Product" ToRole="ProductTitle" />
+    <NavigationProperty Name="Size" Relationship="OnlineStoreModel.FK_Products_Sizes" FromRole="Product" ToRole="Size" />
+  </EntityType>
+  <EntityType Name="ProductTitle">
+    <Key>
+      <PropertyRef Name="ProductTitleId" />
+    </Key>
+    <Property Name="ProductTitleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ColorId" Type="Int32" Nullable="false" />
+    <Property Name="BrandId" Type="Int32" Nullable="false" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Brand" Relationship="OnlineStoreModel.FK_ProductTitles_Brands" FromRole="ProductTitle" ToRole="Brand" />
+    <NavigationProperty Name="Category" Relationship="OnlineStoreModel.FK_ProductTitles_Categories" FromRole="ProductTitle" ToRole="Category" />
+    <NavigationProperty Name="Color" Relationship="OnlineStoreModel.FK_ProductTitles_Colors" FromRole="ProductTitle" ToRole="Color" />
+    <NavigationProperty Name="Products" Relationship="OnlineStoreModel.FK_Products_ProductTitles" FromRole="ProductTitle" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Size">
+    <Key>
+      <PropertyRef Name="SizeId" />
+    </Key>
+    <Property Name="SizeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="OnlineStoreModel.FK_Products_Sizes" FromRole="Size" ToRole="Product" />
+  </EntityType>
+  <EntityContainer Name="OnlineStoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brands" EntityType="Self.Brand" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Colors" EntityType="Self.Color" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="ProductTitles" EntityType="Self.ProductTitle" />
+    <EntitySet Name="Sizes" EntityType="Self.Size" />
+    <EntitySet Name="sysdiagrams" EntityType="OnlineStoreModel.sysdiagram" />
+    <AssociationSet Name="FK_ProductTitles_Brands" Association="OnlineStoreModel.FK_ProductTitles_Brands">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="ProductTitle" EntitySet="ProductTitles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductTitles_Categories" Association="OnlineStoreModel.FK_ProductTitles_Categories">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="ProductTitle" EntitySet="ProductTitles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductTitles_Colors" Association="OnlineStoreModel.FK_ProductTitles_Colors">
+      <End Role="Color" EntitySet="Colors" />
+      <End Role="ProductTitle" EntitySet="ProductTitles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_ProductTitles" Association="OnlineStoreModel.FK_Products_ProductTitles">
+      <End Role="ProductTitle" EntitySet="ProductTitles" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Sizes" Association="OnlineStoreModel.FK_Products_Sizes">
+      <End Role="Size" EntitySet="Sizes" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_ProductTitles_Brands">
+    <End Type="OnlineStoreModel.Brand" Role="Brand" Multiplicity="1" />
+    <End Type="OnlineStoreModel.ProductTitle" Role="ProductTitle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="BrandId" />
+      </Principal>
+      <Dependent Role="ProductTitle">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductTitles_Categories">
+    <End Type="OnlineStoreModel.Category" Role="Category" Multiplicity="1" />
+    <End Type="OnlineStoreModel.ProductTitle" Role="ProductTitle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="ProductTitle">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductTitles_Colors">
+    <End Type="OnlineStoreModel.Color" Role="Color" Multiplicity="1" />
+    <End Type="OnlineStoreModel.ProductTitle" Role="ProductTitle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="ColorId" />
+      </Principal>
+      <Dependent Role="ProductTitle">
+        <PropertyRef Name="ColorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_ProductTitles">
+    <End Type="OnlineStoreModel.ProductTitle" Role="ProductTitle" Multiplicity="1" />
+    <End Type="OnlineStoreModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductTitle">
+        <PropertyRef Name="ProductTitleId" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductTitleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Sizes">
+    <End Type="OnlineStoreModel.Size" Role="Size" Multiplicity="1" />
+    <End Type="OnlineStoreModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Size">
+        <PropertyRef Name="SizeId" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="SizeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

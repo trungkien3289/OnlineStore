@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.UI.Web.MVC", "OnlineStore.UI.Web.MVC\OnlineStore.UI.Web.MVC.csproj", "{41C6CE5D-E360-4672-895D-70DC94F035B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Controllers", "OnlineStore.Controllers\OnlineStore.Controllers.csproj", "{78CBA081-3F6C-4BFE-BAB6-EE29A16DC680}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Infrastructure", "OnlineStore.Infrastructure\OnlineStore.Infrastructure.csproj", "{4FA29C5E-5C1D-47CB-B1BB-B0E1888C389D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Model", "OnlineStore.Model\OnlineStore.Model.csproj", "{2DAE037F-CAAE-42B3-8E7D-AA81CC4DACD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Repository.Entity", "OnlineStore.Repository.Entity\OnlineStore.Repository.Entity.csproj", "{10BF7D48-2DD1-44C3-BF6C-E3DB81C71B13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Services", "OnlineStore.Services\OnlineStore.Services.csproj", "{2E5CD7CE-66EB-4940-946F-98B35FCA3B00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStore.Services.Cache", "OnlineStore.Services.Cache\OnlineStore.Services.Cache.csproj", "{A9DE293C-C6AA-40C4-A5A7-F0250B792520}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41C6CE5D-E360-4672-895D-70DC94F035B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C6CE5D-E360-4672-895D-70DC94F035B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C6CE5D-E360-4672-895D-70DC94F035B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C6CE5D-E360-4672-895D-70DC94F035B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78CBA081-3F6C-4BFE-BAB6-EE29A16DC680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CBA081-3F6C-4BFE-BAB6-EE29A16DC680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78CBA081-3F6C-4BFE-BAB6-EE29A16DC680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78CBA081-3F6C-4BFE-BAB6-EE29A16DC680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA29C5E-5C1D-47CB-B1BB-B0E1888C389D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA29C5E-5C1D-47CB-B1BB-B0E1888C389D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA29C5E-5C1D-47CB-B1BB-B0E1888C389D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA29C5E-5C1D-47CB-B1BB-B0E1888C389D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DAE037F-CAAE-42B3-8E7D-AA81CC4DACD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DAE037F-CAAE-42B3-8E7D-AA81CC4DACD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DAE037F-CAAE-42B3-8E7D-AA81CC4DACD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DAE037F-CAAE-42B3-8E7D-AA81CC4DACD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10BF7D48-2DD1-44C3-BF6C-E3DB81C71B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10BF7D48-2DD1-44C3-BF6C-E3DB81C71B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10BF7D48-2DD1-44C3-BF6C-E3DB81C71B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10BF7D48-2DD1-44C3-BF6C-E3DB81C71B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E5CD7CE-66EB-4940-946F-98B35FCA3B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E5CD7CE-66EB-4940-946F-98B35FCA3B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E5CD7CE-66EB-4940-946F-98B35FCA3B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E5CD7CE-66EB-4940-946F-98B35FCA3B00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9DE293C-C6AA-40C4-A5A7-F0250B792520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9DE293C-C6AA-40C4-A5A7-F0250B792520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9DE293C-C6AA-40C4-A5A7-F0250B792520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9DE293C-C6AA-40C4-A5A7-F0250B792520}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

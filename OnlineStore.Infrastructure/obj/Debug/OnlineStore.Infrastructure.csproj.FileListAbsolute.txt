@@ -1,0 +1,12 @@
+D:\FreelanceProject\Online Store\OnlineStore\OnlineStore.Infrastructure\bin\Debug\OnlineStore.Infrastructure.dll
+D:\FreelanceProject\Online Store\OnlineStore\OnlineStore.Infrastructure\bin\Debug\OnlineStore.Infrastructure.pdb
+D:\FreelanceProject\Online Store\OnlineStore\OnlineStore.Infrastructure\obj\Debug\OnlineStore.Infrastructure.csprojResolveAssemblyReference.cache
+D:\FreelanceProject\Online Store\OnlineStore\OnlineStore.Infrastructure\obj\Debug\OnlineStore.Infrastructure.dll
+D:\FreelanceProject\Online Store\OnlineStore\OnlineStore.Infrastructure\obj\Debug\OnlineStore.Infrastructure.pdb
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Infrastructure\obj\Debug\OnlineStore.Infrastructure.csprojResolveAssemblyReference.cache
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Infrastructure\bin\Debug\OnlineStore.Infrastructure.dll
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Infrastructure\bin\Debug\OnlineStore.Infrastructure.pdb
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Infrastructure\bin\Debug\log4net.dll
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Infrastructure\bin\Debug\log4net.xml
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Infrastructure\obj\Debug\OnlineStore.Infrastructure.dll
+E:\Free Project\OnlineStore\OnlineStore\OnlineStore.Infrastructure\obj\Debug\OnlineStore.Infrastructure.pdb
